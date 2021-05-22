@@ -1,0 +1,5 @@
+{
+  "env": {
+    "baseUrl": "https:11.11.11.11/api/v1/auth/login"
+  }
+}

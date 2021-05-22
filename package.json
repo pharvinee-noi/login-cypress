@@ -1,0 +1,53 @@
+{
+  "name": "dcb",
+  "version": "1.0.0",
+  "description": "dcb web cypress",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "node_modules/cypress/bin/cypress open",
+    "run_cypress_test": "node_modules/cypress/bin/cypress run --headless --browser chrome,TAGS=$CYPRESS_TAG",
+    "merged_test_result": "node_modules/mochawesome-merge/bin/mochawesome-merge.js results/*.json > results/output.json",
+    "generate_test_report": "node_modules/mochawesome-report-generator/bin/cli.js --reportDir results --charts true results/output.json",
+    "merged_and_generate_test_report": "npm run merged_test_result; npm run generate_test_report"
+  },
+  "license": "MIT",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/keywords"
+  },
+  "devDependencies": {
+    "@types/clone": "^0.1.30",
+    "@types/crypto-js": "^4.0.1",
+    "@types/cucumber": "^6.0.1",
+    "@types/cypress-cucumber-preprocessor": "^1.14.0",
+    "@types/jwt-simple": "^0.5.33",
+    "@types/mysql": "^2.15.8",
+    "@types/node": "^13.1.8",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "clone": "^2.1.2",
+    "crypto-js": "^4.0.0",
+    "cypress": "^6.9.1",
+    "cypress-cucumber-preprocessor": "^2.5.4",
+    "cypress-multi-reporters": "^1.2.4",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^8.3.2",
+    "mocha-junit-reporter": "^1.23.3",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.0.0",
+    "mongo": "^0.1.0",
+    "mysql": "github:mysqljs/mysql",
+    "prettier": "^1.19.1",
+    "ts-loader": "^6.2.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.7.5",
+    "uuid": "^8.3.2"
+  },
+  "dependencies": {
+    "@types/node-forge": "^0.9.7",
+    "node-forge": "^0.10.0"
+  }
+}

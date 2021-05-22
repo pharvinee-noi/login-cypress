@@ -1,0 +1,14 @@
+{
+  "request_body": {
+    "phone_number": "0600000000",
+    "user_pin": "123456"
+  },
+  "bad_request_body": {
+    "phone_number": "",
+    "user_pin": ""
+  },
+  "service_down_request_body": {
+    "phone_number": "0611111111",
+    "user_pin": "123456"
+  }
+}
